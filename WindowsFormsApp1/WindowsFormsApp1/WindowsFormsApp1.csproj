@@ -121,5 +121,32 @@
   <ItemGroup>
     <None Include="Resources\rood.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\achterkant1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blauw1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geel1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grijs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groen1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oranje.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paars.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rood1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wit.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
