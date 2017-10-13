@@ -35,5 +35,10 @@ namespace WindowsFormsApp1
             Form4 frm = new Form4();
             frm.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

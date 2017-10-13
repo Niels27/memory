@@ -994,5 +994,12 @@ namespace WindowsFormsApp1
                 else if (vorigeklik == 15) { pictureBox16.Image = Properties.Resources.achterkant; }
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+            frm.Show();
+            this.Close();
+        }
     }
 }
