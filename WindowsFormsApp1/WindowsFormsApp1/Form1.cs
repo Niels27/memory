@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
         {
             Form2 frm = new Form2();
             frm.Show();
+            this.Hide();
             
         }
 
@@ -28,12 +29,18 @@ namespace WindowsFormsApp1
         {
             Form3 frm = new Form3();
             frm.Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Form4 frm = new Form4();
             frm.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
