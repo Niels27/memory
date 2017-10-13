@@ -1005,7 +1005,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form3 frm = new Form3();
+            Form2 frm = new Form2();
             frm.Show();
         }
     }
