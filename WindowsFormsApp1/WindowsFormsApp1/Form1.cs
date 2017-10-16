@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 frm = new Form2();
+            tussenmenu frm = new tussenmenu();
             frm.Show();
             this.Hide();
             
