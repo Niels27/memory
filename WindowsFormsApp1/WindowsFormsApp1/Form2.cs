@@ -40,6 +40,13 @@ namespace WindowsFormsApp1
         bool klikdisable = false; // zodat je maar een paar per keer kan aanklikken
         int vorigeklik = 0; //de positie (0-15) van de vorig aangeklikte kaart
         bool[] disableer = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, };
+        int draaitotaal = 0;
+
+        public static void check( int heya)// deze method checkt of het spel voltooid is
+        {
+            if (heya==8) { Application.Exit(); //code voor als het spel voltooid is, zorg voor overerving naar score scherm
+            }   
+        }
 
         public Form2()
         {
@@ -110,6 +117,8 @@ namespace WindowsFormsApp1
                     {
                         klik = false;
                         disableer[0] = true;
+                        draaitotaal++;
+                        check(draaitotaal);
                     }
 
                 } }
@@ -147,6 +156,8 @@ namespace WindowsFormsApp1
                     {
                         klik = false;
                         disableer[1] = true;
+                        draaitotaal++;
+                        check(draaitotaal);
                     }
 
                 } }
@@ -180,6 +191,8 @@ namespace WindowsFormsApp1
                     {
                         klik = false;
                         disableer[2] = true;
+                        draaitotaal++;
+                        check(draaitotaal);
                     }
 
                 } }
@@ -213,6 +226,8 @@ namespace WindowsFormsApp1
                     {
                         klik = false;
                         disableer[3] = true;
+                        draaitotaal++;
+                        check(draaitotaal);
                     }
                 } }
         }
@@ -245,6 +260,8 @@ namespace WindowsFormsApp1
                     {
                         klik = false;
                         disableer[4] = true;
+                        draaitotaal++;
+                        check(draaitotaal);
                     }
 
                 } }
@@ -278,6 +295,8 @@ namespace WindowsFormsApp1
                     {
                         klik = false;
                         disableer[5] = true;
+                        draaitotaal++;
+                        check(draaitotaal);
                     }
 
                 } }
@@ -311,6 +330,8 @@ namespace WindowsFormsApp1
                     {
                         klik = false;
                         disableer[6] = true;
+                        draaitotaal++;
+                        check(draaitotaal);
                     }
 
                 } }
@@ -344,6 +365,8 @@ namespace WindowsFormsApp1
                     {
                         klik = false;
                         disableer[7] = true;
+                        draaitotaal++;
+                        check(draaitotaal);
                     }
 
                 }
@@ -377,6 +400,8 @@ namespace WindowsFormsApp1
                     {
                         klik = false;
                         disableer[8] = true;
+                        draaitotaal++;
+                        check(draaitotaal);
                     }
 
                 } }
@@ -410,6 +435,8 @@ namespace WindowsFormsApp1
                     {
                         klik = false;
                         disableer[9] = true;
+                        draaitotaal++;
+                        check(draaitotaal);
                     }
 
                 } }
@@ -443,6 +470,8 @@ namespace WindowsFormsApp1
                     {
                         klik = false;
                         disableer[10] = true;
+                        draaitotaal++;
+                        check(draaitotaal);
                     }
 
                 } }
@@ -476,6 +505,8 @@ namespace WindowsFormsApp1
                     {
                         klik = false;
                         disableer[11] = true;
+                        draaitotaal++;
+                        check(draaitotaal);
                     }
 
                 } }
@@ -509,6 +540,8 @@ namespace WindowsFormsApp1
                     {
                         klik = false;
                         disableer[12] = true;
+                        draaitotaal++;
+                        check(draaitotaal);
                     }
                 } }
         }
@@ -541,6 +574,8 @@ namespace WindowsFormsApp1
                     {
                         klik = false;
                         disableer[13] = true;
+                        draaitotaal++;
+                        check(draaitotaal);
                     }
 
                 } }
@@ -574,6 +609,8 @@ namespace WindowsFormsApp1
                     {
                         klik = false;
                         disableer[14] = true;
+                        draaitotaal++;
+                        check(draaitotaal);
                     }
 
                 } }
@@ -607,6 +644,8 @@ namespace WindowsFormsApp1
                     {
                         klik = false;
                         disableer[15] = true;
+                        draaitotaal++;
+                        check(draaitotaal);
                     }
 
                 } }
