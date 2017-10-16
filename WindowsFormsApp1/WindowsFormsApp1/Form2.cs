@@ -31,14 +31,15 @@ namespace WindowsFormsApp1
         int tijdvijftien = 0;
         int tijdzestien = 0;
         //vars
-        List<int> arreeks = new List<int>();
-        List<int> volgordelijst = new List<int>();
-        int[] arree = {1,1,2,2,3,3,4,4,5,5,6,6,7,7,0,0};
-        Random getal = new Random();
-        Timer timer = new Timer();
-        bool klik = false;
-        bool klikdisable = false;
-        int vorigeklik = 0;
+        List<int> arreeks = new List<int>(); // reeks waaruit verwijderd wordt
+        List<int> volgordelijst = new List<int>(); // reeks waarin toegevoegd wordt
+        int[] arree = {1,1,2,2,3,3,4,4,5,5,6,6,7,7,0,0}; //reeks getallen die symbool staat voor de kaartenparen
+        Random getal = new Random(); 
+        Timer timer = new Timer(); 
+        bool klik = false;  // geeft aan of vooraf een kaart is aangeklikt, dus of dit de eerste kaart is die aangeklikt wordt of de tweede
+        bool klikdisable = false; // zodat je maar een paar per keer kan aanklikken
+        int vorigeklik = 0; //de positie (0-15) van de vorig aangeklikte kaart
+        bool[] disableer = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, };
 
         public Form2()
         {
@@ -81,7 +82,8 @@ namespace WindowsFormsApp1
         //de pictureboxen en bijbehorende code als je erop klikt.
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (klikdisable == false) {
+            if (disableer[0]==true) { }
+            else if (klikdisable == false) {
                 if (volgordelijst[0] == 1) { pictureBox1.Image = Properties.Resources.rood; } //vergelijkt de waarde op de index van de volgordelist met welke kleur daarbij hoort.
                 else if (volgordelijst[0] == 2) { pictureBox1.Image = Properties.Resources.blauw; }
                 else if (volgordelijst[0] == 3) { pictureBox1.Image = Properties.Resources.groen; }
@@ -107,7 +109,7 @@ namespace WindowsFormsApp1
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
                         klik = false;
-
+                        disableer[0] = true;
                     }
 
                 } }
@@ -119,7 +121,8 @@ namespace WindowsFormsApp1
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (klikdisable == false) {
+            if (disableer[1] == true) { }
+            else if (klikdisable == false) {
                 if (volgordelijst[1] == 1) { pictureBox2.Image = Properties.Resources.rood; }
                 else if (volgordelijst[1] == 2) { pictureBox2.Image = Properties.Resources.blauw; }
                 else if (volgordelijst[1] == 3) { pictureBox2.Image = Properties.Resources.groen; }
@@ -143,7 +146,7 @@ namespace WindowsFormsApp1
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
                         klik = false;
-
+                        disableer[1] = true;
                     }
 
                 } }
@@ -151,7 +154,8 @@ namespace WindowsFormsApp1
         }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            if (klikdisable == false) {
+            if (disableer[2] == true) { }
+            else if (klikdisable == false) {
                 if (volgordelijst[2] == 1) { pictureBox3.Image = Properties.Resources.rood; }
                 else if (volgordelijst[2] == 2) { pictureBox3.Image = Properties.Resources.blauw; }
                 else if (volgordelijst[2] == 3) { pictureBox3.Image = Properties.Resources.groen; }
@@ -175,7 +179,7 @@ namespace WindowsFormsApp1
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
                         klik = false;
-
+                        disableer[2] = true;
                     }
 
                 } }
@@ -183,7 +187,8 @@ namespace WindowsFormsApp1
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            if (klikdisable==false) {
+            if (disableer[3] == true) { }
+            else if (klikdisable==false) {
                 if (volgordelijst[3] == 1) { pictureBox4.Image = Properties.Resources.rood; }
                 else if (volgordelijst[3] == 2) { pictureBox4.Image = Properties.Resources.blauw; }
                 else if (volgordelijst[3] == 3) { pictureBox4.Image = Properties.Resources.groen; }
@@ -207,14 +212,15 @@ namespace WindowsFormsApp1
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
                         klik = false;
-
+                        disableer[3] = true;
                     }
                 } }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            if (klikdisable == false) {
+            if (disableer[4] == true) { }
+            else if (klikdisable == false) {
                 if (volgordelijst[4] == 1) { pictureBox5.Image = Properties.Resources.rood; }
                 else if (volgordelijst[4] == 2) { pictureBox5.Image = Properties.Resources.blauw; }
                 else if (volgordelijst[4] == 3) { pictureBox5.Image = Properties.Resources.groen; }
@@ -238,7 +244,7 @@ namespace WindowsFormsApp1
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
                         klik = false;
-
+                        disableer[4] = true;
                     }
 
                 } }
@@ -246,7 +252,8 @@ namespace WindowsFormsApp1
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            if (klikdisable == false) {
+            if (disableer[5] == true) { }
+            else if (klikdisable == false) {
                 if (volgordelijst[5] == 1) { pictureBox6.Image = Properties.Resources.rood; }
                 else if (volgordelijst[5] == 2) { pictureBox6.Image = Properties.Resources.blauw; }
                 else if (volgordelijst[5] == 3) { pictureBox6.Image = Properties.Resources.groen; }
@@ -270,7 +277,7 @@ namespace WindowsFormsApp1
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
                         klik = false;
-
+                        disableer[5] = true;
                     }
 
                 } }
@@ -278,7 +285,8 @@ namespace WindowsFormsApp1
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            if (klikdisable == false) {
+            if (disableer[6] == true) { }
+            else if (klikdisable == false) {
                 if (volgordelijst[6] == 1) { pictureBox7.Image = Properties.Resources.rood; }
                 else if (volgordelijst[6] == 2) { pictureBox7.Image = Properties.Resources.blauw; }
                 else if (volgordelijst[6] == 3) { pictureBox7.Image = Properties.Resources.groen; }
@@ -302,7 +310,7 @@ namespace WindowsFormsApp1
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
                         klik = false;
-
+                        disableer[6] = true;
                     }
 
                 } }
@@ -310,7 +318,8 @@ namespace WindowsFormsApp1
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            if (klikdisable == false) {
+            if (disableer[7] == true) { }
+            else if (klikdisable == false) {
                 if (volgordelijst[7] == 1) { pictureBox8.Image = Properties.Resources.rood; }
                 else if (volgordelijst[7] == 2) { pictureBox8.Image = Properties.Resources.blauw; }
                 else if (volgordelijst[7] == 3) { pictureBox8.Image = Properties.Resources.groen; }
@@ -334,7 +343,7 @@ namespace WindowsFormsApp1
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
                         klik = false;
-
+                        disableer[7] = true;
                     }
 
                 }
@@ -342,7 +351,8 @@ namespace WindowsFormsApp1
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            if (klikdisable == false) {
+            if (disableer[8] == true) { }
+            else if (klikdisable == false) {
                 if (volgordelijst[8] == 1) { pictureBox9.Image = Properties.Resources.rood; }
                 else if (volgordelijst[8] == 2) { pictureBox9.Image = Properties.Resources.blauw; }
                 else if (volgordelijst[8] == 3) { pictureBox9.Image = Properties.Resources.groen; }
@@ -366,7 +376,7 @@ namespace WindowsFormsApp1
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
                         klik = false;
-
+                        disableer[8] = true;
                     }
 
                 } }
@@ -374,7 +384,8 @@ namespace WindowsFormsApp1
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            if (klikdisable == false) {
+            if (disableer[9] == true) { }
+            else if (klikdisable == false) {
                 if (volgordelijst[9] == 1) { pictureBox10.Image = Properties.Resources.rood; }
                 else if (volgordelijst[9] == 2) { pictureBox10.Image = Properties.Resources.blauw; }
                 else if (volgordelijst[9] == 3) { pictureBox10.Image = Properties.Resources.groen; }
@@ -398,7 +409,7 @@ namespace WindowsFormsApp1
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
                         klik = false;
-
+                        disableer[9] = true;
                     }
 
                 } }
@@ -406,7 +417,8 @@ namespace WindowsFormsApp1
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            if (klikdisable == false) {
+            if (disableer[10] == true) { }
+            else if (klikdisable == false) {
                 if (volgordelijst[10] == 1) { pictureBox11.Image = Properties.Resources.rood; }
                 else if (volgordelijst[10] == 2) { pictureBox11.Image = Properties.Resources.blauw; }
                 else if (volgordelijst[10] == 3) { pictureBox11.Image = Properties.Resources.groen; }
@@ -430,7 +442,7 @@ namespace WindowsFormsApp1
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
                         klik = false;
-
+                        disableer[10] = true;
                     }
 
                 } }
@@ -438,7 +450,8 @@ namespace WindowsFormsApp1
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            if (klikdisable == false) {
+            if (disableer[11] == true) { }
+            else if (klikdisable == false) {
                 if (volgordelijst[11] == 1) { pictureBox12.Image = Properties.Resources.rood; }
                 else if (volgordelijst[11] == 2) { pictureBox12.Image = Properties.Resources.blauw; }
                 else if (volgordelijst[11] == 3) { pictureBox12.Image = Properties.Resources.groen; }
@@ -462,7 +475,7 @@ namespace WindowsFormsApp1
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
                         klik = false;
-
+                        disableer[11] = true;
                     }
 
                 } }
@@ -470,7 +483,8 @@ namespace WindowsFormsApp1
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            if (klikdisable == false) {
+            if (disableer[12] == true) { }
+            else if (klikdisable == false) {
                 if (volgordelijst[12] == 1) { pictureBox13.Image = Properties.Resources.rood; }
                 else if (volgordelijst[12] == 2) { pictureBox13.Image = Properties.Resources.blauw; }
                 else if (volgordelijst[12] == 3) { pictureBox13.Image = Properties.Resources.groen; }
@@ -494,14 +508,15 @@ namespace WindowsFormsApp1
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
                         klik = false;
-
+                        disableer[12] = true;
                     }
                 } }
         }
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
-            if (klikdisable == false) {
+            if (disableer[13] == true) { }
+            else if (klikdisable == false) {
                 if (volgordelijst[13] == 1) { pictureBox14.Image = Properties.Resources.rood; }
                 else if (volgordelijst[13] == 2) { pictureBox14.Image = Properties.Resources.blauw; }
                 else if (volgordelijst[13] == 3) { pictureBox14.Image = Properties.Resources.groen; }
@@ -525,7 +540,7 @@ namespace WindowsFormsApp1
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
                         klik = false;
-
+                        disableer[13] = true;
                     }
 
                 } }
@@ -533,7 +548,8 @@ namespace WindowsFormsApp1
 
         private void pictureBox15_Click(object sender, EventArgs e)
         {
-            if (klikdisable == false) {
+            if (disableer[14] == true) { }
+            else if (klikdisable == false) {
                 if (volgordelijst[14] == 1) { pictureBox15.Image = Properties.Resources.rood; }
                 else if (volgordelijst[14] == 2) { pictureBox15.Image = Properties.Resources.blauw; }
                 else if (volgordelijst[14] == 3) { pictureBox15.Image = Properties.Resources.groen; }
@@ -557,7 +573,7 @@ namespace WindowsFormsApp1
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
                         klik = false;
-
+                        disableer[14] = true;
                     }
 
                 } }
@@ -565,7 +581,8 @@ namespace WindowsFormsApp1
 
         private void pictureBox16_Click(object sender, EventArgs e)
         {
-            if (klikdisable == false) {
+            if (disableer[15] == true) { }
+            else if (klikdisable == false) {
                 if (volgordelijst[15] == 1) { pictureBox16.Image = Properties.Resources.rood; }
                 else if (volgordelijst[15] == 2) { pictureBox16.Image = Properties.Resources.blauw; }
                 else if (volgordelijst[15] == 3) { pictureBox16.Image = Properties.Resources.groen; }
@@ -589,7 +606,7 @@ namespace WindowsFormsApp1
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
                         klik = false;
-
+                        disableer[15] = true;
                     }
 
                 } }
