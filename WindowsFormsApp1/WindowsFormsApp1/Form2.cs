@@ -368,7 +368,7 @@ namespace WindowsFormsApp1
                 {
                     if (volgordelijst[vorigeklik] != volgordelijst[8]) //wijzig volgordelijst[]
                     {
-                        klikdisable = false;
+                        klikdisable = true;
                         klik = false;
 
                         timer9.Start(); // wijzig timer
@@ -598,7 +598,7 @@ namespace WindowsFormsApp1
                 {
                     if (volgordelijst[vorigeklik] != volgordelijst[15]) //wijzig volgordelijst[]
                     {
-
+                        klikdisable = true;
                         klik = false;
 
                         timer16.Start(); // wijzig timer
