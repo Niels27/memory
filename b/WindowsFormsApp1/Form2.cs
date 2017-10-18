@@ -41,6 +41,10 @@ namespace WindowsFormsApp1
         int vorigeklik = 0; //de positie (0-15) van de vorig aangeklikte kaart
         bool[] disableer = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, };
         int draaitotaal = 0;
+        int beurt = 0;
+        int combo = 1;
+
+        List<int> spelerscores = new List<int>();
 
         public static void check( int heya)// deze method checkt of het spel voltooid is
         {
@@ -51,6 +55,39 @@ namespace WindowsFormsApp1
         public Form2()
         {
             InitializeComponent();
+
+            for (int laptop = 0; laptop < tussenmenu.speleraantal; laptop++) { spelerscores.Add(0); }
+          
+            // geeft spelernamen en bijbehorende scores weer, hide de rest
+            if (tussenmenu.speleraantal == 1) {
+                label5.Visible = false; label10.Visible= false;
+                string naam1 = tussenmenu.spelernamen[0];
+                name1.Text = naam1; name2.Visible = false; name3.Visible = false;name4.Visible = false; label8.Visible = false;label7.Visible = false;label6.Visible = false; }
+            else if (tussenmenu.speleraantal == 2)
+            {
+                string naam1 = tussenmenu.spelernamen[0];
+                name1.Text = naam1;
+                string naam2 = tussenmenu.spelernamen[1];
+                name2.Text = naam2; name3.Visible = false; name4.Visible = false;  label7.Visible = false; label6.Visible = false; }
+            else if (tussenmenu.speleraantal == 3)
+            {
+                string naam1 = tussenmenu.spelernamen[0];
+                name1.Text = naam1;
+                string naam2 = tussenmenu.spelernamen[1];
+                name2.Text = naam2;
+                string naam3 = tussenmenu.spelernamen[2];
+                name3.Text = naam3; name4.Visible = false;  label6.Visible = false; }
+            else if (tussenmenu.speleraantal == 4) {
+                string naam1 = tussenmenu.spelernamen[0];
+                name1.Text = naam1;
+                string naam2 = tussenmenu.spelernamen[1];
+                name2.Text = naam2;
+                string naam3 = tussenmenu.spelernamen[2];
+                name3.Text = naam3;
+                string naam4 = tussenmenu.spelernamen[3];
+                name4.Text = naam4;
+            }
+
 
             //stopt de timers:
             timer1.Stop();
@@ -108,9 +145,11 @@ namespace WindowsFormsApp1
                     {
                         klikdisable = true;
                         klik = false;
-
+                        
                         timer1.Start(); //de code die moet gebeuren na twee seconden staat in de timertick brackets
 
+                        combo = 1;
+                        beurt++;
 
                     }
                     else // dit is de code die gebeurt als de kaarten matchen
@@ -119,6 +158,9 @@ namespace WindowsFormsApp1
                         disableer[0] = true;
                         draaitotaal++;
                         check(draaitotaal);
+
+                        spelerscores[beurt] += 10*combo;
+                        combo++;
                     }
 
                 } }
@@ -151,6 +193,8 @@ namespace WindowsFormsApp1
                         klik = false;
 
                         timer2.Start();
+                        combo = 1;
+                        beurt++;
                     }
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
@@ -158,6 +202,8 @@ namespace WindowsFormsApp1
                         disableer[1] = true;
                         draaitotaal++;
                         check(draaitotaal);
+                        spelerscores[beurt] += 10 * combo;
+                        combo++;
                     }
 
                 } }
@@ -186,6 +232,8 @@ namespace WindowsFormsApp1
                         klik = false;
 
                         timer3.Start();
+                        combo = 1;
+                        beurt++;
                     }
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
@@ -193,6 +241,8 @@ namespace WindowsFormsApp1
                         disableer[2] = true;
                         draaitotaal++;
                         check(draaitotaal);
+                        spelerscores[beurt] += 10 * combo;
+                        combo++;
                     }
 
                 } }
@@ -220,7 +270,9 @@ namespace WindowsFormsApp1
                         klikdisable = true;
                         klik = false;
 
-                        timer4.Start(); // wijzig timer
+                        timer4.Start();
+                        combo = 1;
+                        beurt++;// wijzig timer
                     }
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
@@ -228,6 +280,8 @@ namespace WindowsFormsApp1
                         disableer[3] = true;
                         draaitotaal++;
                         check(draaitotaal);
+                        spelerscores[beurt] += 10 * combo;
+                        combo++;
                     }
                 } }
         }
@@ -254,7 +308,9 @@ namespace WindowsFormsApp1
                         klikdisable = true;
                         klik = false;
 
-                        timer5.Start(); // wijzig timer
+                        timer5.Start();
+                        combo = 1;
+                        beurt++;// wijzig timer
                     }
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
@@ -262,6 +318,8 @@ namespace WindowsFormsApp1
                         disableer[4] = true;
                         draaitotaal++;
                         check(draaitotaal);
+                        spelerscores[beurt] += 10 * combo;
+                        combo++;
                     }
 
                 } }
@@ -289,7 +347,9 @@ namespace WindowsFormsApp1
                         klikdisable = true;
                         klik = false;
 
-                        timer6.Start(); // wijzig timer
+                        timer6.Start();
+                        combo = 1;
+                        beurt++;// wijzig timer
                     }
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
@@ -297,6 +357,8 @@ namespace WindowsFormsApp1
                         disableer[5] = true;
                         draaitotaal++;
                         check(draaitotaal);
+                        spelerscores[beurt] += 10 * combo;
+                        combo++;
                     }
 
                 } }
@@ -324,7 +386,9 @@ namespace WindowsFormsApp1
                         klikdisable = true;
                         klik = false;
 
-                        timer7.Start(); // wijzig timer
+                        timer7.Start();
+                        combo = 1;
+                        beurt++; // wijzig timer
                     }
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
@@ -332,6 +396,8 @@ namespace WindowsFormsApp1
                         disableer[6] = true;
                         draaitotaal++;
                         check(draaitotaal);
+                        spelerscores[beurt] += 10 * combo;
+                        combo++;
                     }
 
                 } }
@@ -359,7 +425,9 @@ namespace WindowsFormsApp1
                         klikdisable = true;
                         klik = false;
 
-                        timer8.Start(); // wijzig timer
+                        timer8.Start();
+                        combo = 1;
+                        beurt++;// wijzig timer
                     }
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
@@ -367,6 +435,8 @@ namespace WindowsFormsApp1
                         disableer[7] = true;
                         draaitotaal++;
                         check(draaitotaal);
+                        spelerscores[beurt] += 10 * combo;
+                        combo++;
                     }
 
                 }
@@ -394,7 +464,9 @@ namespace WindowsFormsApp1
                         klikdisable = true;
                         klik = false;
 
-                        timer9.Start(); // wijzig timer
+                        timer9.Start();
+                        combo = 1;
+                        beurt++;// wijzig timer
                     }
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
@@ -402,6 +474,8 @@ namespace WindowsFormsApp1
                         disableer[8] = true;
                         draaitotaal++;
                         check(draaitotaal);
+                        spelerscores[beurt] += 10 * combo;
+                        combo++;
                     }
 
                 } }
@@ -429,7 +503,9 @@ namespace WindowsFormsApp1
                         klikdisable = true;
                         klik = false;
 
-                        timer10.Start(); // wijzig timer
+                        timer10.Start();
+                        combo = 1;
+                        beurt++;// wijzig timer
                     }
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
@@ -437,6 +513,8 @@ namespace WindowsFormsApp1
                         disableer[9] = true;
                         draaitotaal++;
                         check(draaitotaal);
+                        spelerscores[beurt] += 10 * combo;
+                        combo++;
                     }
 
                 } }
@@ -464,7 +542,9 @@ namespace WindowsFormsApp1
                         klikdisable = true;
                         klik = false;
 
-                        timer11.Start(); // wijzig timer
+                        timer11.Start();
+                        combo = 1;
+                        beurt++;// wijzig timer
                     }
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
@@ -472,6 +552,8 @@ namespace WindowsFormsApp1
                         disableer[10] = true;
                         draaitotaal++;
                         check(draaitotaal);
+                        spelerscores[beurt] += 10 * combo;
+                        combo++;
                     }
 
                 } }
@@ -499,7 +581,9 @@ namespace WindowsFormsApp1
                         klikdisable = true;
                         klik = false;
 
-                        timer12.Start(); // wijzig timer
+                        timer12.Start();
+                        combo = 1;
+                        beurt++;// wijzig timer
                     }
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
@@ -507,6 +591,8 @@ namespace WindowsFormsApp1
                         disableer[11] = true;
                         draaitotaal++;
                         check(draaitotaal);
+                        spelerscores[beurt] += 10 * combo;
+                        combo++;
                     }
 
                 } }
@@ -534,7 +620,9 @@ namespace WindowsFormsApp1
                         klikdisable = true;
                         klik = false;
 
-                        timer13.Start(); // wijzig timer
+                        timer13.Start();
+                        combo = 1;
+                        beurt++;// wijzig timer
                     }
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
@@ -542,6 +630,8 @@ namespace WindowsFormsApp1
                         disableer[12] = true;
                         draaitotaal++;
                         check(draaitotaal);
+                        spelerscores[beurt] += 10 * combo;
+                        combo++;
                     }
                 } }
         }
@@ -568,7 +658,9 @@ namespace WindowsFormsApp1
                         klikdisable = true;
                         klik = false;
 
-                        timer14.Start(); // wijzig timer
+                        timer14.Start();
+                        combo = 1;
+                        beurt++;// wijzig timer
                     }
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
@@ -576,6 +668,8 @@ namespace WindowsFormsApp1
                         disableer[13] = true;
                         draaitotaal++;
                         check(draaitotaal);
+                        spelerscores[beurt] += 10 * combo;
+                        combo++;
                     }
 
                 } }
@@ -603,7 +697,9 @@ namespace WindowsFormsApp1
                         klikdisable = true;
                         klik = false;
 
-                        timer15.Start(); // wijzig timer
+                        timer15.Start();
+                        combo = 1;
+                        beurt++;// wijzig timer
                     }
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
@@ -611,6 +707,8 @@ namespace WindowsFormsApp1
                         disableer[14] = true;
                         draaitotaal++;
                         check(draaitotaal);
+                        spelerscores[beurt] += 10 * combo;
+                        combo++;
                     }
 
                 } }
@@ -638,7 +736,10 @@ namespace WindowsFormsApp1
                         klikdisable = true;
                         klik = false;
 
-                        timer16.Start(); // wijzig timer
+                        timer16.Start();
+                        combo = 1;
+                        beurt++;
+                        // wijzig timer
                     }
                     else // dit is de code die gebeurt als de kaarten matchen
                     {
@@ -646,6 +747,8 @@ namespace WindowsFormsApp1
                         disableer[15] = true;
                         draaitotaal++;
                         check(draaitotaal);
+                        spelerscores[beurt] += 10 * combo;
+                        combo++;
                     }
 
                 } }
@@ -1095,6 +1198,24 @@ namespace WindowsFormsApp1
             this.Close();
             Form2 frm = new Form2();
             frm.Show();
+        }
+
+        private void name1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void beurten_Tick(object sender, EventArgs e)
+        {
+            if (beurt>=tussenmenu.speleraantal) { beurt = 0; }
+            label10.Text = tussenmenu.spelernamen[beurt];
+
+            if (tussenmenu.speleraantal == 1) { label9.Text = Convert.ToString(spelerscores[0]); }
+            if (tussenmenu.speleraantal == 2) { label8.Text = Convert.ToString(spelerscores[1]); label9.Text = Convert.ToString(spelerscores[0]); }
+            if (tussenmenu.speleraantal == 3) { label7.Text = Convert.ToString(spelerscores[2]); label9.Text = Convert.ToString(spelerscores[0]); label8.Text = Convert.ToString(spelerscores[1]); }
+            if (tussenmenu.speleraantal == 4) { label6.Text = Convert.ToString(spelerscores[3]); label9.Text = Convert.ToString(spelerscores[0]); label8.Text = Convert.ToString(spelerscores[1]); label7.Text = Convert.ToString(spelerscores[2]); }
+
+
         }
     }
 }
