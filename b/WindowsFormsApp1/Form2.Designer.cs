@@ -100,7 +100,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.achterkant;
-            this.pictureBox1.Location = new System.Drawing.Point(381, 218);
+            this.pictureBox1.Location = new System.Drawing.Point(478, 222);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(175, 175);
@@ -112,7 +112,7 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.achterkant;
-            this.pictureBox2.Location = new System.Drawing.Point(561, 218);
+            this.pictureBox2.Location = new System.Drawing.Point(658, 222);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(175, 175);
@@ -124,7 +124,7 @@
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.achterkant;
-            this.pictureBox3.Location = new System.Drawing.Point(742, 218);
+            this.pictureBox3.Location = new System.Drawing.Point(839, 222);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(175, 175);
@@ -136,7 +136,7 @@
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.achterkant;
-            this.pictureBox4.Location = new System.Drawing.Point(925, 218);
+            this.pictureBox4.Location = new System.Drawing.Point(1022, 222);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(175, 175);
@@ -148,7 +148,7 @@
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.achterkant;
-            this.pictureBox5.Location = new System.Drawing.Point(381, 399);
+            this.pictureBox5.Location = new System.Drawing.Point(478, 403);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(175, 175);
@@ -160,7 +160,7 @@
             // 
             this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources.achterkant;
-            this.pictureBox6.Location = new System.Drawing.Point(561, 399);
+            this.pictureBox6.Location = new System.Drawing.Point(658, 403);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(175, 175);
@@ -172,7 +172,7 @@
             // 
             this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox7.Image = global::WindowsFormsApp1.Properties.Resources.achterkant;
-            this.pictureBox7.Location = new System.Drawing.Point(742, 399);
+            this.pictureBox7.Location = new System.Drawing.Point(839, 403);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(175, 175);
@@ -184,7 +184,7 @@
             // 
             this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox8.Image = global::WindowsFormsApp1.Properties.Resources.achterkant;
-            this.pictureBox8.Location = new System.Drawing.Point(923, 399);
+            this.pictureBox8.Location = new System.Drawing.Point(1020, 403);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(175, 175);
@@ -196,7 +196,7 @@
             // 
             this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox9.Image = global::WindowsFormsApp1.Properties.Resources.achterkant;
-            this.pictureBox9.Location = new System.Drawing.Point(381, 580);
+            this.pictureBox9.Location = new System.Drawing.Point(478, 584);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(175, 175);
@@ -208,7 +208,7 @@
             // 
             this.pictureBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox10.Image = global::WindowsFormsApp1.Properties.Resources.achterkant;
-            this.pictureBox10.Location = new System.Drawing.Point(561, 580);
+            this.pictureBox10.Location = new System.Drawing.Point(658, 584);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(175, 175);
@@ -220,7 +220,7 @@
             // 
             this.pictureBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox11.Image = global::WindowsFormsApp1.Properties.Resources.achterkant;
-            this.pictureBox11.Location = new System.Drawing.Point(742, 580);
+            this.pictureBox11.Location = new System.Drawing.Point(839, 584);
             this.pictureBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(175, 175);
@@ -232,7 +232,7 @@
             // 
             this.pictureBox12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox12.Image = global::WindowsFormsApp1.Properties.Resources.achterkant;
-            this.pictureBox12.Location = new System.Drawing.Point(923, 580);
+            this.pictureBox12.Location = new System.Drawing.Point(1020, 584);
             this.pictureBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(175, 175);
@@ -244,7 +244,7 @@
             // 
             this.pictureBox13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox13.Image = global::WindowsFormsApp1.Properties.Resources.achterkant;
-            this.pictureBox13.Location = new System.Drawing.Point(381, 761);
+            this.pictureBox13.Location = new System.Drawing.Point(478, 765);
             this.pictureBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(175, 175);
@@ -256,7 +256,7 @@
             // 
             this.pictureBox14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox14.Image = global::WindowsFormsApp1.Properties.Resources.achterkant;
-            this.pictureBox14.Location = new System.Drawing.Point(561, 761);
+            this.pictureBox14.Location = new System.Drawing.Point(658, 765);
             this.pictureBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(175, 175);
@@ -268,7 +268,7 @@
             // 
             this.pictureBox15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox15.Image = global::WindowsFormsApp1.Properties.Resources.achterkant;
-            this.pictureBox15.Location = new System.Drawing.Point(742, 761);
+            this.pictureBox15.Location = new System.Drawing.Point(839, 765);
             this.pictureBox15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(175, 175);
@@ -280,7 +280,7 @@
             // 
             this.pictureBox16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox16.Image = global::WindowsFormsApp1.Properties.Resources.achterkant;
-            this.pictureBox16.Location = new System.Drawing.Point(923, 761);
+            this.pictureBox16.Location = new System.Drawing.Point(1020, 765);
             this.pictureBox16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(175, 175);
@@ -291,7 +291,7 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(381, 182);
+            this.button1.Location = new System.Drawing.Point(478, 186);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(175, 30);
@@ -303,7 +303,7 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(561, 182);
+            this.button2.Location = new System.Drawing.Point(658, 186);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(175, 30);
@@ -314,7 +314,7 @@
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(742, 182);
+            this.button3.Location = new System.Drawing.Point(839, 186);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(175, 30);
@@ -325,7 +325,7 @@
             // button4
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.Location = new System.Drawing.Point(923, 182);
+            this.button4.Location = new System.Drawing.Point(1020, 186);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(175, 30);
@@ -434,7 +434,7 @@
             // 
             this.name1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.name1.AutoSize = true;
-            this.name1.Location = new System.Drawing.Point(1173, 385);
+            this.name1.Location = new System.Drawing.Point(1270, 389);
             this.name1.Name = "name1";
             this.name1.Size = new System.Drawing.Size(46, 17);
             this.name1.TabIndex = 20;
@@ -445,7 +445,7 @@
             // 
             this.name2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.name2.AutoSize = true;
-            this.name2.Location = new System.Drawing.Point(1173, 426);
+            this.name2.Location = new System.Drawing.Point(1270, 430);
             this.name2.Name = "name2";
             this.name2.Size = new System.Drawing.Size(46, 17);
             this.name2.TabIndex = 21;
@@ -455,7 +455,7 @@
             // 
             this.name3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.name3.AutoSize = true;
-            this.name3.Location = new System.Drawing.Point(1173, 465);
+            this.name3.Location = new System.Drawing.Point(1270, 469);
             this.name3.Name = "name3";
             this.name3.Size = new System.Drawing.Size(46, 17);
             this.name3.TabIndex = 22;
@@ -465,7 +465,7 @@
             // 
             this.name4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.name4.AutoSize = true;
-            this.name4.Location = new System.Drawing.Point(1173, 510);
+            this.name4.Location = new System.Drawing.Point(1270, 514);
             this.name4.Name = "name4";
             this.name4.Size = new System.Drawing.Size(46, 17);
             this.name4.TabIndex = 23;
@@ -475,7 +475,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1173, 273);
+            this.label5.Location = new System.Drawing.Point(1270, 277);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 17);
             this.label5.TabIndex = 24;
@@ -485,7 +485,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1261, 510);
+            this.label6.Location = new System.Drawing.Point(1358, 514);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 17);
             this.label6.TabIndex = 25;
@@ -495,7 +495,7 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1261, 465);
+            this.label7.Location = new System.Drawing.Point(1358, 469);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 17);
             this.label7.TabIndex = 29;
@@ -505,7 +505,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1261, 426);
+            this.label8.Location = new System.Drawing.Point(1358, 430);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 17);
             this.label8.TabIndex = 28;
@@ -515,7 +515,7 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(1261, 385);
+            this.label9.Location = new System.Drawing.Point(1358, 389);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(46, 17);
             this.label9.TabIndex = 27;
@@ -525,7 +525,7 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1253, 273);
+            this.label10.Location = new System.Drawing.Point(1350, 277);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(54, 17);
             this.label10.TabIndex = 26;
@@ -535,7 +535,7 @@
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1173, 340);
+            this.label11.Location = new System.Drawing.Point(1270, 344);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(49, 17);
             this.label11.TabIndex = 30;
@@ -545,7 +545,7 @@
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(1263, 340);
+            this.label12.Location = new System.Drawing.Point(1360, 344);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(49, 17);
             this.label12.TabIndex = 31;

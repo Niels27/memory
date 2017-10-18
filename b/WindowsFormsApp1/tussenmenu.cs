@@ -36,44 +36,27 @@ namespace WindowsFormsApp1
 
 
 
-
             
 
+
+
+
+
             //geen gekke tekens of lege naam
-             label7.Visible = true;
+            label7.Visible = true;
             label7.Text = "goed";
                 
             if (speleraantal == 1 && (textBox2.Text == "")) { label7.Text = "naam vergeten in te voeren"; }
             else if (speleraantal == 2 && ( textBox3.Text == "" || textBox2.Text == "")) { label7.Text = "naam vergeten in te voeren"; }
             else if (speleraantal == 3 && ( textBox4.Text == "" || textBox3.Text == "" || textBox2.Text == "")) { label7.Text = "naam vergeten in te voeren"; }
             else if (speleraantal == 4 && ( textBox5.Text == "" || textBox4.Text == "" || textBox3.Text == "" || textBox2.Text == "")) { label7.Text = "naam vergeten in te voeren"; }
+
+            char[] tsjek1 = (textBox2.Text).ToCharArray(); for (int i = 0; i < tsjek1.Length; i++) { if (tsjek1[i] == ';' || tsjek1[i] == '|' || tsjek1[i] == '/' || tsjek1[i] == '*') { label7.Text = "voer geen gekke tekens in"; } }
+            char[] tsjek2 = (textBox3.Text).ToCharArray(); for (int i = 0; i < tsjek2.Length; i++) { if (tsjek2[i] == ';' || tsjek2[i] == '|' || tsjek2[i] == '/' || tsjek2[i] == '*') { label7.Text = "voer geen gekke tekens in"; } }
+            char[] tsjek3 = (textBox4.Text).ToCharArray(); for (int i = 0; i < tsjek3.Length; i++) { if (tsjek3[i] == ';' || tsjek3[i] == '|' || tsjek3[i] == '/' || tsjek3[i] == '*') { label7.Text = "voer geen gekke tekens in"; } }
+            char[] tsjek4 = (textBox5.Text).ToCharArray(); for (int i = 0; i < tsjek4.Length; i++) { if (tsjek4[i] == ';' || tsjek4[i] == '|' || tsjek4[i] == '/' || tsjek4[i] == '*') { label7.Text = "voer geen gekke tekens in"; } }
             
-            if (speleraantal == 1 && (textBox2.Text == "|")) { label7.Text = "verboden teken"; }
-            else if (speleraantal == 2 && (textBox3.Text == "|" || textBox2.Text == "|")) { label7.Text = "verboden teken"; }
-            else if (speleraantal == 3 && (textBox4.Text == "|" || textBox3.Text == "|" || textBox2.Text == "|")) { label7.Text = "verboden teken"; }
-            else if (speleraantal == 4 && (textBox5.Text == "|" || textBox4.Text == "|" || textBox3.Text == "|" || textBox2.Text == "|")) { label7.Text = "verboden teken"; }
-         
-            if (speleraantal == 1 && (textBox2.Text == "/")) { label7.Text = "verboden teken"; }
-            else if (speleraantal == 2 && (textBox3.Text == "/" || textBox2.Text == "/")) { label7.Text = "verboden teken"; }
-            else if (speleraantal == 3 && (textBox4.Text == "/" || textBox3.Text == "/" || textBox2.Text == "/")) { label7.Text = "verboden teken"; }
-            else if (speleraantal == 4 && (textBox5.Text == "/" || textBox4.Text == "/" || textBox3.Text == "/" || textBox2.Text == "/")) { label7.Text = "verboden teken"; }
            
-            if (speleraantal == 1 && (textBox2.Text == "*")) { label7.Text = "verboden teken"; }
-            else if (speleraantal == 2 && (textBox3.Text == "*" || textBox2.Text == "*")) { label7.Text = "verboden teken"; }
-            else if (speleraantal == 3 && (textBox4.Text == "*" || textBox3.Text == "*" || textBox2.Text == "*")) { label7.Text = "verboden teken"; }
-            else if (speleraantal == 4 && (textBox5.Text == "*" || textBox4.Text == "*" || textBox3.Text == "*" || textBox2.Text == "*")) { label7.Text = "verboden teken"; }
-           
-            if (speleraantal == 1 && (textBox2.Text == ";")) { label7.Text = "verboden teken"; }
-            else if (speleraantal == 2 && (textBox3.Text == ";" || textBox2.Text == ";")) { label7.Text = "verboden teken"; }
-            else if (speleraantal == 3 && (textBox4.Text == ";" || textBox3.Text == ";" || textBox2.Text == ";")) { label7.Text = "verboden teken"; }
-            else if (speleraantal == 4 && (textBox5.Text == ";" || textBox4.Text == ";" || textBox3.Text == ";" || textBox2.Text == ";")) { label7.Text = "verboden teken"; }
-
-
-
-
-
-
-
             //checkt de radiobuttons en of de namen goed zijn, dan opent het spelbord pas
             if (radioButton1.Checked && label7.Text == "goed")
             {
