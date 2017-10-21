@@ -73,16 +73,6 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap achterkant1 {
-            get {
-                object obj = ResourceManager.GetObject("achterkant1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap blauw {
             get {
                 object obj = ResourceManager.GetObject("blauw", resourceCulture);
@@ -93,29 +83,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap blauw1 {
-            get {
-                object obj = ResourceManager.GetObject("blauw1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap geel {
             get {
                 object obj = ResourceManager.GetObject("geel", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap geel1 {
-            get {
-                object obj = ResourceManager.GetObject("geel1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,16 +113,6 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap groen1 {
-            get {
-                object obj = ResourceManager.GetObject("groen1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap oranje {
             get {
                 object obj = ResourceManager.GetObject("oranje", resourceCulture);
@@ -173,9 +133,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rood {
+        internal static System.Drawing.Bitmap plaatje10 {
             get {
-                object obj = ResourceManager.GetObject("rood", resourceCulture);
+                object obj = ResourceManager.GetObject("plaatje10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +143,39 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rood1 {
+        internal static System.Drawing.Bitmap plaatje11 {
             get {
-                object obj = ResourceManager.GetObject("rood1", resourceCulture);
+                object obj = ResourceManager.GetObject("plaatje11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plaatje12 {
+            get {
+                object obj = ResourceManager.GetObject("plaatje12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plaatje9 {
+            get {
+                object obj = ResourceManager.GetObject("plaatje9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rood {
+            get {
+                object obj = ResourceManager.GetObject("rood", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

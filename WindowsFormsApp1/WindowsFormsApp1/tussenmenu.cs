@@ -91,9 +91,11 @@ namespace WindowsFormsApp1
                 frm.Show();
                 this.Close();
             }
-            else if (radioButton2.Checked)
+            else if (radioButton2.Checked && label7.Text == "goed")
             {
-                //link naar 6x6 grid
+                Form3 frm = new Form3();
+                frm.Show();
+                this.Close();
             }
 
 
