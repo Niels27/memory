@@ -80,7 +80,9 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
+        private void Form4_Load(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

@@ -1487,7 +1487,18 @@ namespace WindowsFormsApp1
                 if (disableer[hy]==true) { teller++; }
             }
             if (teller==16) { check(8); beurten.Stop(); this.Close(); }
-
+          
+            //combos weergeven
+            if (combo == 2) { combolabel.Text = "MATCH!"; combolabel.Visible = true; }
+            else if (combo == 3) { combolabel.Text = "2x COMBO!"; combolabel.Visible = true; }
+            else if (combo == 4) { combolabel.Text = "3x COMBO!"; combolabel.Visible = true; }
+            else if (combo == 5) { combolabel.Text = "4x COMBO!"; combolabel.Visible = true; }
+            else if (combo == 6) { combolabel.Text = "5x COMBO!"; combolabel.Visible = true; }
+            else if (combo == 7) { combolabel.Text = "6x COMBO!"; combolabel.Visible = true; }
+            else if (combo == 8) { combolabel.Text = "7x COMBO!"; combolabel.Visible = true; }
+            else if (combo == 9) { combolabel.Text = "8x COMBO!"; combolabel.Visible = true; }
+            else if (combo == 10) { combolabel.Text = "9x COMBO!"; combolabel.Visible = true; }
+            else { combolabel.Visible = false; }
 
         }
 
@@ -1649,7 +1660,7 @@ namespace WindowsFormsApp1
                 this.Hide();
             }
 
-
+          
         }
     }
 }
