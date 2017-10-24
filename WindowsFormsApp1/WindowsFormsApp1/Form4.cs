@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
         public Form4()
         {
             InitializeComponent();
-            string highscores = System.IO.File.ReadAllText(@"C:\Users\Gebruiker\Desktop\highscores.sav");
+            string highscores = System.IO.File.ReadAllText(@"c:\memorygroep24\highscores.sav");
             List<string> scnamen = new List<string>();
             List<int> scscores = new List<int>();
             List<int> detector = new List<int>();
@@ -56,11 +56,11 @@ namespace WindowsFormsApp1
 
 
             //
-            label1.Text = scnamen[0]; label6.Text = scnamen[1];
-            label2.Text = scnamen[2]; label7.Text = scnamen[3];
-            label3.Text = scnamen[4]; label8.Text = scnamen[5];
-            label4.Text = scnamen[6]; label9.Text = scnamen[7];
-            label5.Text = scnamen[8]; label10.Text = scnamen[9];
+            label1.Text = scnamen[0]; label6.Text = scnamen[5];
+            label2.Text = scnamen[1]; label7.Text = scnamen[6];
+            label3.Text = scnamen[2]; label8.Text = scnamen[7];
+            label4.Text = scnamen[3]; label9.Text = scnamen[8];
+            label5.Text = scnamen[4]; label10.Text = scnamen[9];
 
             label11.Text = Convert.ToString(scscores[0]);
             label12.Text = Convert.ToString(scscores[1]);

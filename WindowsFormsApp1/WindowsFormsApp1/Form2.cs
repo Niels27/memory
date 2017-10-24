@@ -1504,7 +1504,7 @@ namespace WindowsFormsApp1
 
             //leegmaken van de textfile:
             string text = "";
-            System.IO.File.WriteAllText(@"C:\Users\Gebruiker\Desktop\memory.sav", text); //gebruik '\' niet '/'
+            System.IO.File.WriteAllText(@"c:\memorygroep24\memory.sav", text); //gebruik '\' niet '/'
 
             //dingen om ervoor te zorgen dat het geheel in een string kan worden opgeslagen.
 
@@ -1515,9 +1515,9 @@ namespace WindowsFormsApp1
 
             //vullen van de textfile:
 
-            text = "aantal spelers: " + speleraantal + " spelernamen: ;" + namen + " spelerscores: |" + scores + " disableerbool: /" + bools + " volgordelijst: *" + volgorde;
+            text = "4aantal spelers: " + speleraantal + " spelernamen: ;" + namen + " spelerscores: |" + scores + " disableerbool: /" + bools + " volgordelijst: *" + volgorde;
             
-            System.IO.File.WriteAllText(@"C:\Users\Gebruiker\Desktop\memory.sav", text); //gebruik '\' niet '/'
+            System.IO.File.WriteAllText(@"c:\memorygroep24\memory.sav", text); //gebruik '\' niet '/'
 
         }
 
@@ -1527,7 +1527,7 @@ namespace WindowsFormsApp1
             beurten.Stop();
 
             Form1.laden = true;
-            string savefile = System.IO.File.ReadAllText(@"C:\Users\Gebruiker\Desktop\memory.sav"); // Het pad van de savefile. Let op! geen '/' maar '\'!
+            string savefile = System.IO.File.ReadAllText(@"c:\memorygroep24\memory.sav"); // Het pad van de savefile. Let op! geen '/' maar '\'!
 
 
             // waarin de gegevens worden opgeslagen:
@@ -1538,6 +1538,7 @@ namespace WindowsFormsApp1
             // // // // // //
 
             char[] ree = savefile.ToCharArray();
+            
              //(deel 1)neemt de exacte plek over van de arree, bepaalt speleraantal
             for (int i = 0; i < ree.Length; i++) //lokaliseert namen door de ';'s te lokaliseren.
             {
@@ -1577,22 +1578,7 @@ namespace WindowsFormsApp1
             }
             detector.Clear();//maakt detector leeg
 
-            for (int i = 0; i < ree.Length; i++) //lokaliseert bools door de '/'s te lokaliseren.
-            {
-                if (ree[i] == '/') { detector.Add(i); }
-            }
-
-            for (int i = 0; i < (detector.Count - 1); i++) //(deel 2) zet de bools vervolgens in een string en voegt het toe aan de List
-            {
-                string plv = "";
-                for (int j = detector[i] + 1; j < detector[i + 1]; j++)
-                {
-                    plv += ree[j];
-                }
-                tussenmenu.disableer[i] = bool.Parse(plv); //zet het in de bool[]
-
-            }
-            detector.Clear();
+           
 
             for (int i = 0; i < ree.Length; i++) //lokaliseert pictureposities door de '*'s te lokaliseren.
             {
@@ -1611,14 +1597,58 @@ namespace WindowsFormsApp1
             }
             detector.Clear();//maakt detector leeg
 
-            
 
-                //blabla
-                beurten.Start();
+            for (int i = 0; i < ree.Length; i++) //lokaliseert bools door de '/'s te lokaliseren.
+            {
+                if (ree[i] == '/') { detector.Add(i); }
+            }
+            int grid = detector.Count();
 
-            this.Close();
-            Form2 frm = new Form2();
-            frm.Show();
+            if (detector.Count < 18)
+            {
+
+                for (int i = 0; i < (detector.Count - 1); i++) //(deel 2) zet de bools vervolgens in een string en voegt het toe aan de List
+                {
+                    string plv = "";
+                    for (int j = detector[i] + 1; j < detector[i + 1]; j++)
+                    {
+                        plv += ree[j];
+                    }
+                    tussenmenu.disableer[i] = bool.Parse(plv); //zet het in de bool[]
+
+                }
+                detector.Clear();
+            }
+            else
+            {
+                for (int i = 0; i < (detector.Count - 1); i++) //(deel 2) zet de bools vervolgens in een string en voegt het toe aan de List
+                {
+                    string plv = "";
+                    for (int j = detector[i] + 1; j < detector[i + 1]; j++)
+                    {
+                        plv += ree[j];
+                    }
+                    tussenmenu.disableer2[i] = bool.Parse(plv); //zet het in de bool[]
+
+                }
+                detector.Clear();
+            }
+
+
+            //checkt welk grid het is en opent bijbehorende form.
+            if (grid < 18)
+            {
+                Form2 frm = new Form2();
+                frm.Show();
+                this.Hide();
+            }
+            else
+            {
+                Form3 frm = new Form3();
+                frm.Show();
+                this.Hide();
+            }
+
 
         }
     }

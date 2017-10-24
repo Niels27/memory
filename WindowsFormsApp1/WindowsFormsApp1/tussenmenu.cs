@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
         public static bool[] disableer = { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, };
         public static List<int> volgordelijst = new List<int>();
         public static List<int> spelerscores = new List<int>();
+        public static bool[] disableer2 = { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, };
 
 
         public tussenmenu()
@@ -46,7 +47,31 @@ namespace WindowsFormsApp1
             tussenmenu.disableer[13] = false;
             tussenmenu.disableer[14] = false;
             tussenmenu.disableer[15] = false;
-            //misschien moet de bool[] ook geereset worden
+
+            tussenmenu.disableer2[0] = false;
+            tussenmenu.disableer2[1] = false;
+            tussenmenu.disableer2[2] = false;
+            tussenmenu.disableer2[3] = false;
+            tussenmenu.disableer2[4] = false;
+            tussenmenu.disableer2[5] = false;
+            tussenmenu.disableer2[6] = false;
+            tussenmenu.disableer2[7] = false;
+            tussenmenu.disableer2[8] = false;
+            tussenmenu.disableer2[9] = false;
+            tussenmenu.disableer2[10] = false;
+            tussenmenu.disableer2[11] = false;
+            tussenmenu.disableer2[12] = false;
+            tussenmenu.disableer2[13] = false;
+            tussenmenu.disableer2[14] = false;
+            tussenmenu.disableer2[15] = false;
+            tussenmenu.disableer2[16] = false;
+            tussenmenu.disableer2[17] = false;
+            tussenmenu.disableer2[18] = false;
+            tussenmenu.disableer2[19] = false;
+            tussenmenu.disableer2[20] = false;
+            tussenmenu.disableer2[21] = false;
+            tussenmenu.disableer2[22] = false;
+            tussenmenu.disableer2[23] = false;
         }
 
         
@@ -85,13 +110,13 @@ namespace WindowsFormsApp1
 
 
             //checkt de radiobuttons en of de namen goed zijn, dan opent het spelbord pas
-            if (radioButton1.Checked && label7.Text == "goed")
+            if (radioButton1.Checked&&label7.Text =="goed")
             {
                 Form2 frm = new Form2();
                 frm.Show();
                 this.Close();
             }
-            else if (radioButton2.Checked && label7.Text == "goed")
+            else if (radioButton2.Checked&&label7.Text == "goed")
             {
                 Form3 frm = new Form3();
                 frm.Show();

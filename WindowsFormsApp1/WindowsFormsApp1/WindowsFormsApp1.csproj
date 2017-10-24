@@ -77,11 +77,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="tussenmenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,9 +100,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <EmbeddedResource Include="tussenmenu.resx">
       <DependentUpon>tussenmenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,16 +167,43 @@
     <None Include="Resources\wit.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\plaatje9.jpg" />
+    <None Include="Resources\achterkant2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\plaatje10.jpg" />
+    <None Include="Resources\blauw2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\plaatje11.jpg" />
+    <None Include="Resources\donkerrood.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\plaatje12.jpg" />
+    <None Include="Resources\geel2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grijs1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groen2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kotsgroen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lichtblauw.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oranje1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paars1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rood2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roze.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wit1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
