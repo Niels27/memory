@@ -56,7 +56,7 @@ namespace WindowsFormsApp1
 
 
             //vars voor deze form:
-            string highscores = System.IO.File.ReadAllText(@"C:\Users\Gebruiker\Desktop\highscores.sav");
+            string highscores = System.IO.File.ReadAllText(@"C:\Users\niels\Desktop\highscores.sav");
             List<string> scnamen = new List<string>();
             List<int> scscores = new List<int>();
             List<int> detector = new List<int>();
@@ -263,7 +263,7 @@ namespace WindowsFormsApp1
             string text = a + b; //werkt naar behoren
 
 
-            System.IO.File.WriteAllText(@"C:\Users\Gebruiker\Desktop\highscores.sav", text); //gebruik '\' niet '/'
+            System.IO.File.WriteAllText(@"C:\Users\niels\Desktop\highscores.sav", text); //gebruik '\' niet '/'
 
 
 

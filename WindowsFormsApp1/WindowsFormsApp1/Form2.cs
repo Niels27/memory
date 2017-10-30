@@ -1504,7 +1504,7 @@ namespace WindowsFormsApp1
 
             //leegmaken van de textfile:
             string text = "";
-            System.IO.File.WriteAllText(@"C:\Users\Gebruiker\Desktop\memory.sav", text); //gebruik '\' niet '/'
+            System.IO.File.WriteAllText(@"C:\Users\niels\Desktop\memory.sav", text); //gebruik '\' niet '/'
 
             //dingen om ervoor te zorgen dat het geheel in een string kan worden opgeslagen.
 
@@ -1517,7 +1517,7 @@ namespace WindowsFormsApp1
 
             text = "aantal spelers: " + speleraantal + " spelernamen: ;" + namen + " spelerscores: |" + scores + " disableerbool: /" + bools + " volgordelijst: *" + volgorde;
             
-            System.IO.File.WriteAllText(@"C:\Users\Gebruiker\Desktop\memory.sav", text); //gebruik '\' niet '/'
+            System.IO.File.WriteAllText(@"C:\Users\niels\Desktop\memory.sav", text); //gebruik '\' niet '/'
 
         }
 
@@ -1527,7 +1527,7 @@ namespace WindowsFormsApp1
             beurten.Stop();
 
             Form1.laden = true;
-            string savefile = System.IO.File.ReadAllText(@"C:\Users\Gebruiker\Desktop\memory.sav"); // Het pad van de savefile. Let op! geen '/' maar '\'!
+            string savefile = System.IO.File.ReadAllText(@"C:\Users\niels\Desktop\memory.sav"); // Het pad van de savefile. Let op! geen '/' maar '\'!
 
 
             // waarin de gegevens worden opgeslagen:

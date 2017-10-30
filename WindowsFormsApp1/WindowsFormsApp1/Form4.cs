@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
         public Form4()
         {
             InitializeComponent();
-            string highscores = System.IO.File.ReadAllText(@"C:\Users\Gebruiker\Desktop\highscores.sav");
+            string highscores = System.IO.File.ReadAllText(@"C:\Users\niels\Desktop\highscores.sav");
             List<string> scnamen = new List<string>();
             List<int> scscores = new List<int>();
             List<int> detector = new List<int>();
