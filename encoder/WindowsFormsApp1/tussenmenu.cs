@@ -119,13 +119,13 @@ namespace WindowsFormsApp1
             //checkt de radiobuttons en of de namen goed zijn, dan opent het spelbord pas
             if (radioButton1.Checked&&label7.Text =="goed")
             {
-                Form2 frm = new Form2();
+                Spelbord4x4 frm = new Spelbord4x4();
                 frm.Show();
                 this.Close();
             }
             else if (radioButton2.Checked&&label7.Text == "goed")
             {
-                Form3 frm = new Form3();
+                Spelbord6x4 frm = new Spelbord6x4();
                 frm.Show();
                 this.Close();
             }
@@ -135,7 +135,7 @@ namespace WindowsFormsApp1
         //terug naar hoofdmenu
             private void button2_Click(object sender, EventArgs e)
         {
-            Form1 frm = new Form1();
+            Hoofdmenu frm = new Hoofdmenu();
             frm.Show();
             this.Close();
         }
