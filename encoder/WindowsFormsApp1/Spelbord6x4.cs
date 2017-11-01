@@ -7,10 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/// <summary>
+/// Het 6*4 spelbord bestaat hoofdzakelijk uit 16 pictureboxen, 16 timers en vier buttons.
+/// 
+/// De hoofdzakelijke werking:
+/// - Deze form checkt eerst of er data geladen is (of de savegame geladen moet worden).
+/// - Als er niks geladen hoeft te worden, maakt de form de kaartverdeling random.
+/// 
+/// Opmerkingen: weinig methods, veel op basis van klikken/timers.
+/// </summary>
 namespace WindowsFormsApp1
 {
-
+    /// <summary>
+    /// De variabelen:
+    /// - timervariabelen. Een variabele voor iedere timer, om mee te kunnen tellen.
+    /// - variabelen voor het encoderen. Dit is dus voor het lezen en opslaan van een savegame.
+    /// - spelbordvariabelen. Deze hebben te maken met de variabelen die nodig zijn als er op een picturebox geklikt wordt, of andere
+    ///   spelmechanieken.
+    /// </summary>
     public partial class Spelbord6x4 : Form
     {
         //timervariabelen
@@ -62,8 +76,10 @@ namespace WindowsFormsApp1
         int draaitotaal = 0;
         int beurt = 0; //wiens beurt het is
         int combo = 1; //combo multiplier
-                       //List<int> spelerscores = new List<int>();
-
+                       
+        /// <summary>
+        /// De method check voert code uit als het spel beëindigd moet worden.
+        /// </summary>
         //methods
         public static void check(int heya)// deze method checkt of het spel voltooid is
         {
@@ -79,7 +95,13 @@ namespace WindowsFormsApp1
 
 
 
-        //voidmainequivalent
+        /// <summary>
+        /// spelbord6x4() doet de volgende dingen:
+        /// - checkt of het een savegame is die geladen wordt, zo nee, dan geeft die iedere speler een score van 0.
+        /// - stopt alle timers, want die moeten alleen lopen wanneer er op de corresponderende picturebox is geklikt.
+        /// - checkt of het een savegame is, zo nee, dan worden de memorykaarten geschud.
+        /// - checkt of er in de boolean array waarden zijn die true zijn, en zo ja, laadt deze waarden in.
+        /// </summary>
         public Spelbord6x4()
         {
             InitializeComponent();
@@ -507,7 +529,9 @@ namespace WindowsFormsApp1
         }//einde 
 
 
-
+        /// <summary>
+        /// Als een picturebox wordt aangeklikt, wordt de bijbehorende code uitgevoerd.
+        /// </summary>
         //de pictureboxen en bijbehorende code als je erop klikt.
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -1266,6 +1290,10 @@ namespace WindowsFormsApp1
                 }
             }
         }
+        /// <summary>
+        /// Hieronder staan de timers. De timers worden alleen geactiveerd wanneer de speler een foute kaartcombinatie maakt.
+        /// Na twee seconden stopt de timer zichzelf en voert de code uit om de kaarten weer terug om te draaien.
+        /// </summary>
         //timers
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -1826,14 +1854,18 @@ namespace WindowsFormsApp1
                 klikdisable = false;
             }
         }
-
+        /// <summary>
+        /// De knop om naar het hoofdmenu te gaan.
+        /// </summary>
         private void button4_Click(object sender, EventArgs e)
         {
             Hoofdmenu frm = new Hoofdmenu();
             frm.Show();
             this.Close();
         }
-
+        /// <summary>
+        /// De herstartknop. het laat de namen in de public variabelen in het tussenmenu staan, en reset de rest door het scherm te herstarten.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             beurten.Stop();
@@ -1879,7 +1911,12 @@ namespace WindowsFormsApp1
         {
 
         }
-
+        /// <summary>
+        /// De beurtentimer:
+        /// - ververst de spelernamen en spelerscores iedere 100ms.
+        /// - checkt of er combo's worden gemaakt
+        /// - checkt of het spel uitgespeeld is, en als dit zo is, wordt het spel geëindigd.
+        /// </summary>
         private void beurten_Tick(object sender, EventArgs e)
         {
             if (beurt >= tussenmenu.speleraantal) { beurt = 0; }
@@ -1948,7 +1985,11 @@ namespace WindowsFormsApp1
             else { combolabel.Visible = false; }
 
         }
-
+        /// <summary>
+        /// Knop voor het saven.
+        /// Het slaat alle belangrijke informatie op, dus de namen, scores, volgordelijst, de boolean.
+        /// Wanneer deze informatie verzameld is, wordt het geëncodeerd en in de savefile geschreven.
+        /// </summary>
         private void button2_Click(object sender, EventArgs e)//VOOR HET SAVEN!!
         {
 
@@ -2013,7 +2054,13 @@ namespace WindowsFormsApp1
             System.IO.File.WriteAllText(@"c:\memorygroep24\memory.sav", text); //gebruik '\' niet '/'
 
         }
-
+        /// <summary>
+        /// De code voor het laden.
+        /// Het haalt de informatie op uit de savefile, vervolgens wordt het gedecodeerd. Vervolgens worden de variabelen (namen,
+        /// scores, volgordelijst, boolean array) vastgezet als public tussenmenu variabelen. Daarna wordt het scherm geherstart.
+        /// Als een nieuw scherm geopend wordt, wordt altijd als eerst gecheckt of er een savegame wordt geladen.
+        /// Omdat dat het geval is, doet de form voor de rest z'n ding.
+        /// </summary>
         private void button3_Click(object sender, EventArgs e)// VOOR HET LADEN!!
         {
             //blabla 
@@ -2178,7 +2225,10 @@ namespace WindowsFormsApp1
 
 
         }
-
+        /// <summary>
+        /// Omdat het 6*4 spelbord gecopy-paste is van het 4*4 bord qua hoofdvorm, zijn hieronder nog een aantal pictureboxes 
+        /// die aangeklikt kunnen worden.
+        /// </summary>
         private void pictureBox17_Click(object sender, EventArgs e)
         {
             if (disableer2[16] == true) { }//wijzig
@@ -2586,7 +2636,10 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
+        /// <summary>
+        /// Omdat het 6*4 bord gecopy-paste is van het 4*4 bord, zijn hieronder nog wat later toegevoegde timers.
+        /// </summary>
+        
         private void timer17_Tick(object sender, EventArgs e)
         {
             tijdzeventien++;//pas deze aan

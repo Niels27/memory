@@ -10,11 +10,32 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-
+    /// <summary>
+    /// Het tussenmenu is bedoeld om informatie te verzamelen over het te maken scherm. 
+    /// Opties zijn:
+    ///  - Speleraantal kiezen
+    ///  - Spelernamen invullen
+    ///  - Gridgrootte.
+    /// 
+    /// Opmerkingen:
+    /// De variabelen zijn public.
+    /// </summary>
     public partial class tussenmenu : Form
     {
-        //variabelen
-       
+        
+        /// <summary>
+        /// De variabelen zijn public. Wanneer een spel geladen wordt, worden deze public variabelen ingevuld vanuit de safefile,
+        /// daarna een scherm heropend. 
+        /// 
+        /// - speleraantal is.... het speleraantal.
+        /// - spelernamen is een List waarin spelernamen geädd worden.
+        /// - disableer is een boolean array. Iedere index staat voor een picturebox. Als die waarde op die index true is, moet die picturebox
+        ///   bij het laden de "omgedraaide kaart" tonen.
+        /// - volgordelijst bevat welke kaart op welke pictureboxindex staat. We hebben getallen 0-7 gehanteerd voor 4*4 memory, 0-11 voor 
+        ///   6*4 memory. Het getal staat dus voor welke kaart omgedraaid zou moeten worden wanneer op de picturebox geklikt wordt.
+        /// - spelerscores is een List waarin de scores van de speler komen te staan, die worden opgedate iedere keer dat er gescoord wordt.
+        /// - disableer2 is een boolean arary en werkt hetzelfde als disableer. het is alleen een langere array, omdat deze is voor 6*4 memory.
+        /// </summary>
         public static int speleraantal = 0;
         public static List<string> spelernamen = new List<string>();
         public static bool[] disableer = { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, };
@@ -23,7 +44,13 @@ namespace WindowsFormsApp1
         public static bool[] disableer2 = { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, };
 
 
-
+        /// <summary>
+        /// Inhoud van tussenmenu().
+        /// 
+        /// - Wanneer je in het tussenmenu komt, wil je een nieuw spel spelen, dus het eerste wat gebeurt is dat de variabelen van het
+        ///   tussenmenu worden gereset. 
+        ///   
+        /// </summary>
         public tussenmenu()
         {
 
@@ -81,8 +108,10 @@ namespace WindowsFormsApp1
          
         }
 
-        
 
+        /// <summary>
+        /// button1_click checkt de ingevoerde informatie.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             //hier moet code staan die spelernamen opvraagt

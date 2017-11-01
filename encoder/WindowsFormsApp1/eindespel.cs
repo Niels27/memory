@@ -10,8 +10,22 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
+    /// <summary>
+    /// Deze form is bedoeld voor wanneer het spel beëindigd is.
+    /// 
+    /// De functionaliteiten die in deze form geïmplementeerd zijn zijn:
+    ///  - Het detecteren van of er een nieuwe highscore is behaald
+    ///  - Het toevoegen van die nieuwe highscore
+    ///  - Het encoderen van de nieuw-gevormde highscorelijst.
+    /// 
+    /// Opmerkingen:
+    /// Iedere keer wanneer de nieuwe highscorelijst gemaakt wordt, dan overschrijft die dus het oude bestand.
+    /// </summary>
     public partial class eindespel : Form
     {
+        /// <summary>
+        /// De variabelen naam, tussengetal1, totaalgetal, schrijf en tekenlijst zijn voor het encoderen van de highscorelijst.
+        /// </summary>
         List<string> naam = new List<string>();
 
         int tussengetal1 = 0;
@@ -22,17 +36,28 @@ namespace WindowsFormsApp1
         char[] tekenlijst = {'q','w','e','r','t','y','u','i','o','p','[',']','a','s','d','f','g','h','j','k','l',';','{','|','z','x','c','v','b','n','m',',','.','/',
                                     '1','2','3','4','5','6','7','8','9','0','!','@','#','$','%','^','&','*','(',')','_','-','=','+','Q','W','E','R','T','Y','U','I','O','P',
                                     'A','S','D','F','G','H','J','K','L','Z','X','C','V','B'};
-
+       
+        /// <summary>
+        /// Inhoud van public eindespel():
+        ///  - Code detecteert eerst de variabelen uit het spelbord, en zet het in labels.
+        ///  - Vervolgens wordt de informatie uit de highscorelijst gehaald en gedecodeerd.
+        ///  - dan worden de behaalde scores in de game vergeleken, en gesorteerd.
+        ///  - De nieuwe naam/namen worden toegevoegd.
+        ///  - De nieuwe highscorelijst wordt geëncodeerd, en opgeslagen in highscores.sav
+        /// </summary>
         public eindespel()
         {
             InitializeComponent();
 
-            
 
-            //waarden die vanuit het memorybord moeten worden gehaald:
+            /// <summary>
+            /// waarden die vanuit het memorybord moeten worden gehaald:
+            /// </summary>
             List<string> spelernamen = tussenmenu.spelernamen;
             List<int> spelerscores = tussenmenu.spelerscores;
-            //voor de labels:
+            /// <summary>
+            /// Code voor de labels, detecteert speleraantal en toont de spelernamen in de labels.
+            /// </summary>
             if (tussenmenu.speleraantal == 1) {
                 label2.Text = spelernamen[0]; label6.Text = Convert.ToString(spelerscores[0]);
                 //maakt deze labels onzichtbaar:
@@ -63,11 +88,49 @@ namespace WindowsFormsApp1
             }
 
             //
-           
 
 
+            /// <summary>
+            /// Deze code leest de highscorelijst.
+            /// </summary>
             //vars voor deze form:
             string highscores = System.IO.File.ReadAllText(@"c:\memorygroep24\highscores.sav");
+
+            /*
+             DECODEERT HIGHSCORES.SAV
+             */
+            string text2 = highscores;
+
+            char[] arrrey = text2.ToCharArray();
+            int tteller = 0;
+            for (int i = 0; i < arrrey.Length; i++)
+            {
+                if (tteller > 41) { tteller = 0; }
+
+                for (int j = 0; j < tekenlijst.Length; j++)
+                {
+                    if (arrrey[i] == tekenlijst[j]) { tussengetal1 = j + 1; totaalgetal = tussengetal1 - tteller; }
+                }
+
+                tteller++;
+
+                for (int h = 0; h < schrijf.Length; h++)
+                {
+                    if (totaalgetal == h + 1) { naam.Add(Convert.ToString(schrijf[h])); }
+                }
+            }
+
+            string erk = "";
+            for (int i = 0; i < naam.Count; i++)
+            {
+                erk += "" + naam[i];
+            }
+            highscores = erk;
+            naam.Clear();
+
+            /*
+             EINDE DECODEREN
+             */
             List<string> scnamen = new List<string>();
             List<int> scscores = new List<int>();
             List<int> detector = new List<int>();
@@ -105,8 +168,11 @@ namespace WindowsFormsApp1
                 scscores.Add(int.Parse(plv)); //zet het in de list
             }
             detector.Clear();//maakt detector leeg
+            
+            /// <summary>
+            /// update de highscorelijst op basis van punten, op de juiste plek in de list.
+            /// </summary>
 
-            //update de highscorelijst op basis van punten, op de juiste plek in de list.
             for (int i = 0; i < spelernamen.Count; i++)
             {
 
@@ -263,17 +329,17 @@ namespace WindowsFormsApp1
 
 
             }
+
+            /// <summary>
+            /// voor het zetten in de sav file; eerst maakt het een lange string, dan encodeert ie het.
+            /// </summary>
             
-            // voor het zetten in de sav file
             string a = ";";//voor de topspelers
             string b = "/";//voor de topscores
             for (int i = 0; i < scnamen.Count; i++) { a += scnamen[i] + ";"; b += Convert.ToString(scscores[i]) + "/"; }//voegt alles toe aan a en b
             string text = a + b; //werkt naar behoren
 
-            /*
-             *
-             *
-             */
+            
 
             string text1 = text;
             text1 = text1.ToLower();
@@ -307,9 +373,10 @@ namespace WindowsFormsApp1
 
             System.IO.File.WriteAllText(@"c:\memorygroep24\highscores.sav", text); //gebruik '\' niet '/'
 
-            // // //
-            //de onderstaande code is voor het opslaan van wie gewonnen/verloren heeft.
-            // // //
+            
+            /// <summary>
+            /// de onderstaande code is voor het opslaan van wie gewonnen/verloren heeft.
+            /// </summary>
             List<int> tussenlijst = new List<int>();
             List<string> tussenlijst2 = new List<string>();
 
@@ -337,7 +404,9 @@ namespace WindowsFormsApp1
             System.IO.File.WriteAllText(@"c:\memorygroep24\winverlies.sav", tekstje);
             
         }//einde 
-
+         /// <summary>
+         /// Klik op de knop, vaar naar het hoofdmenu.
+         /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             Hoofdmenu naam = new Hoofdmenu();

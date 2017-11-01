@@ -10,6 +10,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
+    /// <summary>
+    /// Deze form bevat de highscores. De basisfeatures zijn:
+    /// - Het inlezen van de highscorefile.
+    /// - Het decoderen van de highscorefile.
+    /// - Het in labels zetten van de namen en scores.
+    ///
+    /// Opmerkingen: geen.
+    /// </summary>
     public partial class Highscores : Form
     {
         List<string> naam = new List<string>();
@@ -21,7 +29,9 @@ namespace WindowsFormsApp1
         char[] tekenlijst = {'q','w','e','r','t','y','u','i','o','p','[',']','a','s','d','f','g','h','j','k','l',';','{','|','z','x','c','v','b','n','m',',','.','/',
                                     '1','2','3','4','5','6','7','8','9','0','!','@','#','$','%','^','&','*','(',')','_','-','=','+','Q','W','E','R','T','Y','U','I','O','P',
                                     'A','S','D','F','G','H','J','K','L','Z','X','C','V','B'};
-
+        /// <summary>
+        /// Highscores() leest standaard de highscorefile, decodeert het en zet het in labels.
+        /// </summary>
         public Highscores()
         {
             InitializeComponent();
@@ -64,6 +74,7 @@ namespace WindowsFormsApp1
              //EINDE DECODEREN
              */
 
+            //verwerkt de ingelezen savefile:
             List<string> scnamen = new List<string>();
             List<int> scscores = new List<int>();
             List<int> detector = new List<int>();
